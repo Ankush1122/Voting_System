@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mk(1rur&l0xjy@_l-^+e27p&-4i!=-d^mk59y6l1x%3f!z4)@c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -59,9 +59,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5174",  # Your frontend's URL
-]
+
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'Voting_System.urls'
